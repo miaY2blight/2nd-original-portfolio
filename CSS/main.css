@@ -1,0 +1,136 @@
+body{
+    font-size: 1.8vw;min-height: 100vh;margin: 0 auto;
+    display: grid;
+    grid-template: 
+    "..... header ....."5vh
+    "..... right ....."5vh
+    "..... left ....."5vh
+    "..... ..... ....."3vh
+    "..... footer ....."15vh
+    "..... center ....."1fr
+    /1vw 1fr 1vw;
+  }
+  
+ /* header */
+
+  header{grid-area:header;display: flex;}
+  .title{line-height: 5vh;font-weight: bold;flex: 1;text-align: center;}
+  header>ul{width: 80vw;;padding:0 0 0 3vw;margin: 0;list-style: none;display: flex;line-height: 5vh;overflow-x: auto;} 
+  header>ul::-webkit-scrollbar{display: none;}
+  header>ul li{cursor: pointer;position: relative;flex: 1;white-space: nowrap;}
+  header>ul li  a{text-decoration: none;color: black;}
+  header>ul li+li{margin-left: 5vw;}
+  header input{position: absolute;top: 10vh;}
+
+  header h3{margin: 0;}
+  .asia,.europe,.northAmerica,.southAmerica,.africa,.oceania
+  {display: none;}
+  .asia.appear,.europe.appear,.northAmerica.appear,.southAmerica.appear,.africa.appear,.oceania.appear
+  {position: absolute;top: 0;right: 0;left: 0;bottom: 0;background: rgba(0,0,0,.8);padding: 5vw;color: white;
+  display: grid;grid-template: 
+  "east ..... south ..... west"1fr
+  "..... ..... ..... ..... ....."4vh
+  "seast ..... central ..... north"1fr
+  /1fr 3vw 1fr 3vw 1fr;z-index: 2;}
+  .asia.appear ul,.europe.appear ul,.northAmerica.appear ul,.southAmerica.appear ul,.africa.appear ul,.oceania.appear ul
+  {padding: 0;margin: 0;grid-area: east;}
+  .asia.appear ul li,.europe.appear ul li,.northAmerica.appear ul li,.southAmerica.appear ul li,.africa.appear ul li,.oceania.appear ul li
+  {margin-top: 1vh;}
+  .asia.appear a,.europe.appear a,.northAmerica.appear a,.southAmerica.appear a,.africa.appear a,.oceania.appear a
+  {text-decoration: none; color: white;}
+  .southeastasia{grid-area: seast;}
+  .sauthasia{grid-area: south;}
+  .centralasia{grid-area: central;}
+  .westasia{grid-area: west;}
+  .northasia{grid-area: north;}
+
+
+  /* footer */
+  footer{grid-area: footer;background-color: azure;color: red;background-image: url('../img/advertize.jpg');background-size: contain;font-size: 5vw;line-height: 15vh;text-align: center;font-weight: bold;text-shadow: 2px 2px 2px yellow;background-position: center;}
+
+
+  /* aside */
+  aside{grid-area: right;background-color:rgb(250, 242, 231);line-height: 5vh;display: flex;overflow:scroll;padding: 0 2vw;position:-webkit-sticky;position: sticky;top: 0;}
+  #china2{display: none;position: absolute;bottom: 0;}
+  aside ul{padding: 0 ;margin: 0;list-style: none;display: flex;overflow-x: auto;}
+  aside ul::-webkit-scrollbar{display: none;}
+  aside li{white-space: nowrap; cursor: pointer;}
+  aside li:hover{opacity :.5 }
+  aside li+li{margin-left: 5vw;}
+  aside a{text-decoration: none;color: black;display: block;width: 100%;height: 100%;}
+
+
+
+  /* nav */
+  nav{grid-area: left;background-color:rgb(240, 232, 216);line-height: 5vh;display: flex;overflow:scroll;padding: 0 2vw;position:-webkit-sticky;position: sticky;top: 5vh;}
+  nav ul{padding: 0;margin: 0;list-style: none;display: flex;overflow-x: auto;}
+  nav ul::-webkit-scrollbar{display: none;}
+  nav li,h3{white-space: nowrap; cursor: pointer;margin-left: 5vw;}
+  nav h3{margin: 0;cursor:auto;user-select: none;}
+  nav h3~h3{margin-left: 5vw;}
+  nav li:hover{opacity: .5;}
+  nav a{display: block;width: 100%;height: 100%;text-decoration: none;color:black}
+
+  /* main */
+  main{grid-area: center;background-color:whitesmoke;}
+  #china1{width: 75%;display: block;margin: 0 auto;}
+  .northeastchina,.beijing,.xian,.shandong,.nanjing,.shanghai,.fujian,.guangzhou,.guilin,.sichuan,.yunnan,.silkroad,.tibet,.uighur,.inner-mongolia
+  {display: none;}
+  .northeastchina.appear,.beijing.appear,.xian.appear,.shandong.appear,.nanjing.appear,.shanghai.appear,.fujian.appear,.guangzhou.appear,.guilin.appear,.sichuan.appear,.yunnan.appear,.silkroad.appear,.tibet.appear,.uighur.appear,.inner-mongolia.appear
+  {display: block;}
+  #pagetop{display:block;transform:  translateY(-10vh);opacity: 0;}
+  #topdesc{margin: 0 auto 15vh;width: 80%;background:rgba(0,0,0,0.7);color: white;}
+  #topdesc.hidden{display: none;}
+  main div{padding: 3vh;}
+  .desc{margin: 0 0 15vh;}
+  main h1{padding-top: 10vh;}
+  main h1 span{color: orange;margin-left: 7vw;}
+  .img{width: 75%;margin: 0 auto;}
+  .img img{width: 100%;}
+  .spot+.spot{padding-top: 10vh;}
+  .break{display: none;}
+  .no-img{width: 75%;text-align: center;background-color: black;color:white;vertical-align: baseline;aspect-ratio: 5 / 3;margin: 0 auto;display: flex;justify-content: center;align-items: center;}
+  .no-img h3{margin: 0;}
+  
+
+@media  (min-width:930px) {
+  
+  body{
+    font-size: 1.2vw;min-height: 100vh;margin: 0 auto;
+    display: grid;
+    grid-template:
+    "..... header header header header header ....."5vh
+    "..... ..... ..... ..... ..... ..... ....."2vh
+    "..... right ..... center ..... left ....."75vh
+    "..... ..... ..... ..... ..... ..... ....."2vh
+    "..... footer footer footer footer footer ....."15vh
+    /1vw 20vw 2vw 1fr 2vw 20vw 1vw;
+  }
+  
+  /* aside */
+  aside{position: relative;}
+  #china2{display: block;width: 90%;transform: translateX(-1vw);}
+  aside ul{display: block;overflow-y: auto;height: 70%;list-style: circle;width: 100%;}
+  aside li,aside li+li{margin-left: 2vw;}
+  #lastarea{padding-bottom: 10vh;}
+
+
+  /* nav */
+  nav ul{display: block;overflow-y: auto;list-style: circle;width: 100%;position: relative;}
+  nav li{margin-left: 2vw;}
+  nav li a{width: 100%;overflow: scroll;}
+  nav li a::-webkit-scrollbar{display: none;}
+  nav h3~h3{margin: 0;}
+
+
+
+  /* main */
+  main{overflow-y: auto}
+  main::-webkit-scrollbar{display: none;}
+  #china1{display: none;}
+  #topdesc{margin:26vh auto;}
+  main h1{padding: 0;}
+  .spot+.spot{padding-top: 0;}
+  .break{display: inline}
+
+}
