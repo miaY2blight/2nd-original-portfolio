@@ -1,5 +1,5 @@
 body{
-    font-size: 1.8vw;min-height: 100vh;margin: 0 auto;
+    font-size: 2.4vw;min-height: 100vh;margin: 0 auto;
     display: grid;
     grid-template: 
     "..... header ....."5vh
@@ -96,7 +96,7 @@ body{
 @media  (min-width:930px) {
   
   body{
-    font-size: 1.2vw;min-height: 100vh;margin: 0 auto;
+    font-size: 1.3vw;min-height: 100vh;margin: 0 auto;
     display: grid;
     grid-template:
     "..... header header header header header ....."5vh
